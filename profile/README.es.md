@@ -1,6 +1,8 @@
 # Accessible Justice
 
-**[Sitio Web](https://accessiblejustice.ai/) | [Justice Access Foundation](https://justiceaccessfoundation.org/)**
+- Sitio Web: [accessiblejustice.ai](https://accessiblejustice.ai)
+- Fundación: [Justice Access Foundation](https://justiceaccessfoundation.org)
+- Carreras: [github.com/accessible-justice/jobs](https://github.com/accessible-justice/jobs)
 
 *[English](README.md) | [中文](README.zh.md)*
 
@@ -70,11 +72,6 @@ Ofrecemos:
 - Oportunidades de crecimiento profesional y aprendizaje
 - Cultura de equipo colaborativa e impulsada por la misión
 
-## Conéctate con Nosotros
-
-- Sitio Web: [accessiblejustice.ai](https://accessiblejustice.ai)
-- Fundación: [Justice Access Foundation](https://justiceaccessfoundation.org)
-- Carreras: [github.com/accessible-justice/jobs](https://github.com/accessible-justice/jobs)
 
 ## Involúcrate
 

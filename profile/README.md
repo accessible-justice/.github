@@ -1,4 +1,4 @@
-# Accessible Justice
+# Accessible Justice Inc.
 
 **[Website](https://accessiblejustice.ai/) | [Justice Access Foundation](https://justiceaccessfoundation.org/)**
 

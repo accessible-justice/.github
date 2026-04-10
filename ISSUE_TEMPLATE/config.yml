@@ -1,0 +1,17 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🏛️ Legal Support
+    url: https://accessiblejustice.ai/support
+    about: Get help with using our AI-powered legal services
+  - name: 📚 Documentation
+    url: https://accessiblejustice.ai/docs
+    about: Browse our comprehensive documentation and guides
+  - name: 💼 Careers
+    url: https://github.com/accessible-justice/jobs
+    about: Join our mission to democratize access to justice
+  - name: 🔒 Security Issues
+    url: https://accessiblejustice.ai/security
+    about: Report security vulnerabilities privately (do not use public issues)
+  - name: 💬 Community Discussions
+    url: https://github.com/orgs/accessible-justice/discussions
+    about: Ask questions, share ideas, and connect with the community

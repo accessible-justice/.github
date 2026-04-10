@@ -1,0 +1,19 @@
+{
+  "name": "Accessibility Testing Suite",
+  "description": "Comprehensive accessibility testing using axe-core, Lighthouse, and WCAG validation.",
+  "iconName": "accessibility",
+  "categories": [
+    "Accessibility",
+    "Testing",
+    "Web Development"
+  ],
+  "filePatterns": [
+    "*.html",
+    "*.jsx",
+    "*.tsx",
+    "*.vue",
+    "package.json",
+    "src/**",
+    "public/**"
+  ]
+}

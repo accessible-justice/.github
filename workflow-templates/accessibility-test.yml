@@ -1,0 +1,181 @@
+name: Accessibility Testing
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  axe-accessibility-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: |
+        npm install -g @axe-core/cli puppeteer
+        npm install || echo "No package.json found, skipping npm install"
+    
+    - name: Build project (if applicable)
+      run: |
+        if [ -f package.json ] && grep -q '"build"' package.json; then
+          npm run build
+        else
+          echo "No build script found, skipping build"
+        fi
+    
+    - name: Start development server
+      run: |
+        if [ -f package.json ] && grep -q '"start"' package.json; then
+          npm start &
+          sleep 30
+        elif [ -f package.json ] && grep -q '"dev"' package.json; then
+          npm run dev &
+          sleep 30
+        else
+          echo "No start/dev script found, testing static files"
+        fi
+    
+    - name: Run axe accessibility tests
+      run: |
+        # Test localhost if server is running
+        if curl -f http://localhost:3000 2>/dev/null; then
+          axe --dir ./axe-reports http://localhost:3000
+        elif curl -f http://localhost:8000 2>/dev/null; then
+          axe --dir ./axe-reports http://localhost:8000
+        else
+          # Test static HTML files
+          find . -name "*.html" -not -path "./node_modules/*" -not -path "./.git/*" | head -5 | while read file; do
+            echo "Testing $file"
+            axe --dir ./axe-reports "file://$(pwd)/$file"
+          done
+        fi
+    
+    - name: Upload axe reports
+      uses: actions/upload-artifact@v3
+      with:
+        name: axe-accessibility-reports
+        path: ./axe-reports/
+
+  lighthouse-accessibility:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+    
+    - name: Install Lighthouse CI
+      run: npm install -g @lhci/cli
+    
+    - name: Install project dependencies
+      run: npm install || echo "No package.json found"
+    
+    - name: Build project
+      run: |
+        if [ -f package.json ] && grep -q '"build"' package.json; then
+          npm run build
+        fi
+    
+    - name: Run Lighthouse CI
+      run: |
+        # Create LHCI config if it doesn't exist
+        if [ ! -f lighthouserc.json ]; then
+          cat > lighthouserc.json << EOF
+        {
+          "ci": {
+            "collect": {
+              "staticDistDir": "./dist",
+              "url": ["http://localhost:3000"]
+            },
+            "assert": {
+              "assertions": {
+                "categories:accessibility": ["error", {"minScore": 0.8}]
+              }
+            }
+          }
+        }
+        EOF
+        fi
+        
+        # Start server if available
+        if [ -f package.json ] && grep -q '"start"' package.json; then
+          npm start &
+          sleep 30
+          lhci autorun
+        else
+          # Test static files
+          if [ -d dist ]; then
+            lhci autorun --staticDistDir=./dist
+          elif [ -d build ]; then
+            lhci autorun --staticDistDir=./build
+          else
+            echo "No dist or build directory found, skipping Lighthouse"
+          fi
+        fi
+    
+    - name: Upload Lighthouse reports
+      uses: actions/upload-artifact@v3
+      with:
+        name: lighthouse-reports
+        path: .lighthouseci/
+
+  wcag-validation:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Install HTML validator
+      run: |
+        npm install -g vnu-jar
+    
+    - name: Validate HTML structure
+      run: |
+        find . -name "*.html" -not -path "./node_modules/*" -not -path "./.git/*" | head -10 | while read file; do
+          echo "Validating $file"
+          vnu --errors-only "$file" || echo "Validation issues found in $file"
+        done
+    
+    - name: Check color contrast
+      run: |
+        echo "Manual color contrast check required"
+        echo "Ensure contrast ratio meets WCAG AA standards:"
+        echo "- Normal text: 4.5:1"
+        echo "- Large text: 3:1"
+        echo "- UI components: 3:1"
+    
+    - name: Accessibility checklist
+      run: |
+        echo "# Accessibility Compliance Checklist" > accessibility-checklist.md
+        echo "" >> accessibility-checklist.md
+        echo "## WCAG 2.1 AA Compliance" >> accessibility-checklist.md
+        echo "- [ ] All images have alt text" >> accessibility-checklist.md
+        echo "- [ ] Color contrast meets 4.5:1 ratio" >> accessibility-checklist.md
+        echo "- [ ] Keyboard navigation works" >> accessibility-checklist.md
+        echo "- [ ] Focus indicators are visible" >> accessibility-checklist.md
+        echo "- [ ] Headings follow proper hierarchy" >> accessibility-checklist.md
+        echo "- [ ] Forms have proper labels" >> accessibility-checklist.md
+        echo "- [ ] ARIA attributes are used correctly" >> accessibility-checklist.md
+        echo "- [ ] No auto-playing audio/video" >> accessibility-checklist.md
+        echo "- [ ] Text can be resized to 200%" >> accessibility-checklist.md
+        echo "- [ ] Page has proper landmark roles" >> accessibility-checklist.md
+        
+        cat accessibility-checklist.md
+    
+    - name: Upload accessibility checklist
+      uses: actions/upload-artifact@v3
+      with:
+        name: accessibility-checklist
+        path: accessibility-checklist.md

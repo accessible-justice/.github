@@ -1,0 +1,212 @@
+name: ✨ Feature Request
+description: Suggest a new feature or enhancement for Accessible Justice
+title: "[Feature]: "
+labels: ["enhancement", "triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for suggesting a new feature! Your ideas help us improve access to justice through technology.
+        
+        Please provide detailed information about your feature request.
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Pre-submission Checklist
+      description: Please confirm the following before submitting this feature request
+      options:
+        - label: I have searched existing issues and confirmed this feature hasn't been requested
+          required: true
+        - label: This feature aligns with Accessible Justice's mission of democratizing legal access
+          required: true
+        - label: This request contains no sensitive legal information or personal data
+          required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Feature Category
+      description: Which area does this feature request relate to?
+      options:
+        - AI/ML Enhancement
+        - Legal Document Processing
+        - User Interface/Experience
+        - Accessibility Improvement
+        - API/Integration
+        - Mobile Application
+        - Data Analytics/Reporting
+        - Security/Privacy
+        - Legal Workflow Automation
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority Level
+      description: How important is this feature to you?
+      options:
+        - Critical (Essential for core functionality)
+        - High (Would significantly improve user experience)
+        - Medium (Would be nice to have)
+        - Low (Minor improvement)
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: What problem does this feature solve? What pain point are users experiencing?
+      placeholder: |
+        Example: Self-represented litigants struggle to understand complex legal documents because the current AI analysis doesn't provide plain-language explanations for legal terminology.
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: Describe the feature you'd like to see implemented
+      placeholder: |
+        Example: Add a "Plain Language Mode" that automatically detects legal jargon and provides simple explanations in a sidebar or tooltip when users hover over complex terms.
+    validations:
+      required: true
+
+  - type: textarea
+    id: user-story
+    attributes:
+      label: User Story
+      description: |
+        Write a user story that describes how this feature would be used
+        Format: "As a [type of user], I want [goal] so that [benefit]"
+      placeholder: |
+        As a self-represented litigant reviewing an eviction notice, I want to see plain-language explanations of legal terms so that I can understand my rights and deadlines without needing to hire an attorney.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: target-users
+    attributes:
+      label: Target Users
+      description: Who would primarily benefit from this feature?
+      multiple: true
+      options:
+        - Self-represented litigants
+        - Legal aid attorneys
+        - Pro bono lawyers
+        - Legal clinic staff
+        - Court personnel
+        - Social workers
+        - Community advocates
+        - Legal students
+        - General public
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: |
+        What criteria must be met for this feature to be considered complete?
+        Use checkboxes to list specific requirements
+      placeholder: |
+        - [ ] Feature works with screen readers and other assistive technologies
+        - [ ] Explanations are written at an 8th-grade reading level
+        - [ ] Users can toggle the feature on/off
+        - [ ] Explanations are contextually relevant to the legal domain
+        - [ ] Feature doesn't slow down document processing by more than 2 seconds
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative Solutions
+      description: What alternative solutions or workarounds have you considered?
+      placeholder: |
+        Example: Users could manually look up terms in a legal dictionary, but this is time-consuming and interrupts their workflow.
+
+  - type: dropdown
+    id: accessibility
+    attributes:
+      label: Accessibility Considerations
+      description: How does this feature impact accessibility?
+      options:
+        - This feature improves accessibility
+        - This feature has no accessibility impact
+        - This feature might create accessibility barriers
+        - Accessibility impact is unknown
+    validations:
+      required: true
+
+  - type: textarea
+    id: accessibility-details
+    attributes:
+      label: Accessibility Implementation Notes
+      description: |
+        If this feature impacts accessibility, please describe:
+        - How it improves access for users with disabilities
+        - Potential barriers it might create
+        - Specific accessibility requirements
+      placeholder: |
+        Example: Feature should work with screen readers, support high contrast mode, and be navigable via keyboard only.
+
+  - type: textarea
+    id: legal-domains
+    attributes:
+      label: Legal Domains
+      description: Which areas of law would this feature impact?
+      placeholder: |
+        Example: Housing law, employment law, family law, consumer protection, etc.
+        Select "All" if the feature applies broadly.
+
+  - type: textarea
+    id: technical-considerations
+    attributes:
+      label: Technical Considerations
+      description: |
+        Any technical aspects to consider? (Optional - for technical users)
+        - Performance requirements
+        - Integration needs
+        - Data privacy concerns
+      placeholder: |
+        Example: Feature should work offline, integrate with existing document parser, and ensure no legal content is sent to third-party services.
+
+  - type: textarea
+    id: mockups
+    attributes:
+      label: Mockups/Examples
+      description: |
+        If you have mockups, wireframes, or examples from other applications, please share them here
+        You can drag and drop images directly into this text box
+      placeholder: Drag and drop mockups or examples here
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Expected Impact
+      description: |
+        How would this feature impact users and the organization?
+        - Number of users affected
+        - Time savings
+        - Improved outcomes
+        - Alignment with mission
+      placeholder: |
+        Example: Could help 80% of housing law users better understand their documents, potentially reducing the need for attorney consultation by 30%.
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: |
+        Any other information that would be helpful?
+        - Research or studies supporting this feature
+        - Similar implementations elsewhere
+        - Regulatory or compliance considerations
+      placeholder: Any additional context that supports this feature request

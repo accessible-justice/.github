@@ -1,4 +1,8 @@
-# Accessible Justice 🏛️⚖️
+# Accessible Justice
+
+**[Website](https://accessiblejustice.ai/) | [Justice Access Foundation](https://justiceaccessfoundation.org/)**
+
+*[中文](README.zh.md) | [Español](README.es.md)*
 
 ## Transforming Legal Access Through Technology
 
@@ -10,22 +14,22 @@ We expand access to the civil legal system, protect due process rights, and work
 
 ## What We Do
 
-### 🏠 **Preventing Housing Instability**
+### **Preventing Housing Instability**
 - Legal education platforms and procedural information systems
 - Automated referral coordination for low-income residents
 - AI-powered tools for understanding housing proceedings and eviction actions
 
-### 💰 **Wage Protection & Economic Justice**
+### **Wage Protection & Economic Justice**
 - Digital access to legal information and resources for workers
 - Technology solutions for addressing unpaid wages and unlawful payroll deductions
 - Automated systems for detecting and reporting wage theft
 
-### 🏛️ **Procedural Fairness & Court Navigation**
+### **Procedural Fairness & Court Navigation**
 - AI-assisted court procedure guidance for self-represented individuals
 - Automated deadline tracking and filing requirement systems
 - Digital tools for understanding civil court procedures
 
-### 🤖 **AI for Access to Justice**
+### **AI for Access to Justice**
 - Legal AI systems designed with fairness and accessibility in mind
 - Open-source tools for legal aid organizations
 - Technology infrastructure for scaling legal assistance
@@ -41,36 +45,36 @@ We leverage cutting-edge technologies to build scalable, accessible solutions:
 
 ## Impact
 
-- 🔍 Helping thousands navigate complex legal procedures
-- 📚 Providing free access to legal education and resources
-- 🏠 Preventing housing instability through early intervention
-- ⚖️ Promoting procedural fairness in civil court systems
+- Helping thousands navigate complex legal procedures
+- Providing free access to legal education and resources
+- Preventing housing instability through early intervention
+- Promoting procedural fairness in civil court systems
 
 ## Open Source Commitment
 
 We believe in the power of open-source software to advance equal access to justice. Our projects are:
-- 🔓 **Permissionless**: Free to use and modify
-- 🤝 **Inclusive**: Built with diverse communities in mind
-- 🔍 **Transparent**: Open development process
-- ⚖️ **Anti-discriminatory**: Designed to reduce, not amplify, bias
+- **Permissionless**: Free to use and modify
+- **Inclusive**: Built with diverse communities in mind
+- **Transparent**: Open development process
+- **Anti-discriminatory**: Designed to reduce, not amplify, bias
 
-## 🚀 Join Our Team!
+## Join Our Team
 
 We're building the future of legal technology and looking for passionate individuals to join our mission. Whether you're a developer, designer, legal expert, or advocate for social justice, we want to work with you.
 
-**[🔗 View Open Positions](https://github.com/accessible-justice/jobs)**
+**[View Open Positions](https://github.com/accessible-justice/jobs)**
 
 We offer:
-- 💻 Remote-first work environment
-- 📈 Opportunity to create meaningful impact
-- 🌱 Professional growth and learning opportunities
-- 🤝 Collaborative, mission-driven team culture
+- Remote-first work environment
+- Opportunity to create meaningful impact
+- Professional growth and learning opportunities
+- Collaborative, mission-driven team culture
 
 ## Connect With Us
 
-- 🌐 Website: [accessiblejustice.ai](https://accessiblejustice.ai)
-- 🏛️ Foundation: [Justice Access Foundation](https://justiceaccessfoundation.org)
-- 💼 Careers: [github.com/accessible-justice/jobs](https://github.com/accessible-justice/jobs)
+- Website: [accessiblejustice.ai](https://accessiblejustice.ai)
+- Foundation: [Justice Access Foundation](https://justiceaccessfoundation.org)
+- Careers: [github.com/accessible-justice/jobs](https://github.com/accessible-justice/jobs)
 
 ## Get Involved
 

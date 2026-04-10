@@ -1,0 +1,21 @@
+{
+  "name": "Legal Compliance Scanner",
+  "description": "Automated legal compliance checking for data privacy, licenses, and accessibility standards.",
+  "iconName": "law", 
+  "categories": [
+    "Compliance",
+    "Security",
+    "Legal"
+  ],
+  "filePatterns": [
+    "*.py",
+    "*.js",
+    "*.ts",
+    "*.html",
+    "*.jsx",
+    "*.tsx",
+    "requirements.txt",
+    "package.json",
+    "LICENSE"
+  ]
+}

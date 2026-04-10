@@ -1,0 +1,165 @@
+name: 🐛 Bug Report
+description: Report a bug or unexpected behavior
+title: "[Bug]: "
+labels: ["bug", "triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to report a bug! This helps us improve Accessible Justice's AI-powered legal services.
+        
+        Please fill out the following information to help us understand and reproduce the issue.
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Pre-submission Checklist
+      description: Please confirm the following before submitting this bug report
+      options:
+        - label: I have searched existing issues and confirmed this is not a duplicate
+          required: true
+        - label: I can reproduce this issue consistently
+          required: true
+        - label: This issue contains no sensitive legal information or personal data
+          required: true
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      description: Which component of our system is affected?
+      options:
+        - AI/ML Models
+        - Web Interface
+        - API/Backend
+        - Database
+        - Legal Document Processing
+        - User Authentication
+        - Accessibility Features
+        - Mobile App
+        - Other/Unknown
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: How severe is this bug?
+      options:
+        - Critical (System down, data loss, security vulnerability)
+        - High (Major functionality broken, many users affected)
+        - Medium (Feature partially broken, workaround exists)
+        - Low (Minor issue, cosmetic problem)
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: Provide a clear and concise description of what the bug is
+      placeholder: |
+        Example: When uploading a legal document for analysis, the AI model returns an error instead of processing the content.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Detailed steps to reproduce the behavior
+      placeholder: |
+        1. Navigate to document upload page
+        2. Select a PDF file (example.pdf)
+        3. Click "Analyze Document" button
+        4. Wait for processing to complete
+        5. See error message instead of results
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+      placeholder: The document should be processed and analysis results should be displayed
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened? Include error messages if applicable
+      placeholder: |
+        Error message: "Document processing failed. Please try again."
+        No analysis results are shown.
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment Information
+      description: Provide details about your environment
+      placeholder: |
+        - OS: [e.g., Windows 10, macOS 12.0, Ubuntu 20.04]
+        - Browser: [e.g., Chrome 95, Firefox 94, Safari 15]
+        - Device: [e.g., Desktop, Mobile, Tablet]
+        - Screen reader: [if using accessibility tools]
+        - Network: [if relevant to the issue]
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error Logs/Console Output
+      description: |
+        Include any relevant error logs, console output, or stack traces
+        ⚠️ **Important**: Remove any sensitive information, API keys, or personal data
+      render: text
+      placeholder: |
+        Paste error logs here (ensure no sensitive data is included)
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots/Screen Recordings
+      description: |
+        If applicable, add screenshots or screen recordings to help explain the problem
+        You can drag and drop images directly into this text box
+      placeholder: Drag and drop screenshots here
+
+  - type: dropdown
+    id: accessibility
+    attributes:
+      label: Accessibility Impact
+      description: Does this bug affect accessibility or assistive technologies?
+      options:
+        - "No accessibility impact"
+        - "Minor accessibility issue"
+        - "Major accessibility barrier"
+        - "Completely inaccessible"
+        - "Unknown/Unsure"
+
+  - type: textarea
+    id: workaround
+    attributes:
+      label: Workaround
+      description: Is there a temporary workaround for this issue?
+      placeholder: Describe any workaround you've found
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: |
+        Add any other context about the problem here
+        - Legal domain specifics (housing, employment, etc.)
+        - User type (self-represented litigant, legal professional)
+        - Frequency of occurrence
+      placeholder: Any additional context that might help us understand the issue better

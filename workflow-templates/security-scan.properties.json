@@ -1,0 +1,21 @@
+{
+  "name": "Comprehensive Security Scanner",
+  "description": "Multi-layer security scanning including dependencies, code vulnerabilities, secrets, and containers.",
+  "iconName": "shield",
+  "categories": [
+    "Security",
+    "Vulnerability",
+    "DevSecOps"
+  ],
+  "filePatterns": [
+    "requirements.txt",
+    "package.json",
+    "*.py",
+    "*.js",
+    "*.ts",
+    "*.go",
+    "*.java",
+    "Dockerfile",
+    "docker-compose.yml"
+  ]
+}

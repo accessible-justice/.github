@@ -1,0 +1,17 @@
+{
+  "name": "AI/ML Model CI/CD Pipeline",
+  "description": "Comprehensive CI/CD pipeline for AI/ML projects with testing, validation, and security scanning.",
+  "iconName": "robot",
+  "categories": [
+    "Python",
+    "Machine Learning",
+    "AI"
+  ],
+  "filePatterns": [
+    "requirements.txt",
+    "setup.py",
+    "*.py",
+    "models/**",
+    "notebooks/**/*.ipynb"
+  ]
+}

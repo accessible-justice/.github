@@ -54,7 +54,7 @@ We leverage cutting-edge technologies to build scalable, accessible solutions:
 
 ## Open Source Commitment
 
-We believe in the power of open-source software to advance equal access to justice. Our projects are:
+We believe in the power of open-source software to advance equal access to justice. Our public projects are:
 - **Permissionless**: Free to use and modify
 - **Inclusive**: Built with diverse communities in mind
 - **Transparent**: Open development process

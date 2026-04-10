@@ -4,7 +4,7 @@
 - 官网: [accessiblejustice.ai](https://accessiblejustice.ai)
 - 公共慈善基金会: [Justice Access Foundation](https://justiceaccessfoundation.org)
 - 职业机会: [github.com/accessible-justice/jobs](https://github.com/accessible-justice/jobs)
-- 
+  
 *[English](README.md) | [Español](README.es.md)*
 
 ## 通过科技变革法律服务
